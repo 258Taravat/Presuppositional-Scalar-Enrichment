@@ -31,16 +31,20 @@ table {
 }
 
 .slide {
-  text-align: center;
-  width: 90%;
-  height: 90%;
   display: none;
   position: absolute;
-  margin: 0.5%;
-  margin-left: 0.5%;
-  padding: 1% 2% 1% 2%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 900px;     
+  min-height: 600px;
+  padding: 10px 20px;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
 }
-
 input,
 select,
 button {
@@ -75,10 +79,7 @@ button[disabled] {
   cursor: not-allowed;
 }
 
-/**
-## Experiment-specific styles
-This stuff will vary by experiment.
-*/
+
 
 #centered {
   text-align: center;
@@ -135,11 +136,12 @@ form {
 
 #legal {
   text-align: justify;
-  margin: 0 auto;
-  padding: 200px;
-  padding-top: 30px;
-  margin-top: 1.5em;
+  width: 900px;          
+  margin: 30px auto;     
+  padding: 20px;         
+  text-align: justify;   
   font-size: 0.8em;
+  line-height: 1.5;
 }
 
 /* prog bar */
@@ -197,7 +199,37 @@ form {
 .sliderLabel {
   font-size: 12px;
 }
+.questionnaire {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
 
+.questionnaire p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.questionnaire textarea,
+.questionnaire input[type="text"] {
+    margin-top: 5px;
+}
+.education {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.education label {
+    white-space: nowrap;
+}
+#consent p {
+    width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+}
 #qudy0 {
   width: 150px;
   height: 15px;

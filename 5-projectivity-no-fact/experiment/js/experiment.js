@@ -8,6 +8,14 @@ function make_slides(f) {
     },
   });
 
+  slides.consent = slide({
+  name: "consent",
+
+  button: function () {
+    exp.go();
+  },
+});
+
   slides.instructions = slide({
     name: "instructions",
     button: function () {
@@ -634,114 +642,114 @@ function init() {
   var contents = {
     1: {
       gender: "f",
-      content: "Mary ate many of the cupcakes",
-      know: "Does Patrick know that Mary ate many of the cupcakes?",
-      discover: "Did Patrick discover that Mary ate many of the cupcakes?",
-      reveal: "Did Patrick reveal that Mary ate many of the cupcakes?",
-      establish: "Did Patrick establish that Mary ate many of the cupcakes?",
-      think: "Does Patrick think that Mary ate many of the cupcakes?",
-      suggest: "Did Patrick suggest that Mary ate many of the cupcakes?",
-      prove: "Did Patrick prove that Mary ate many of the cupcakes?",
-      say: "Did Patrick say that Mary ate many of the cupcakes?",
-      hear: "Did Patrick hear that Mary ate many of the cupcakes?",
-      inform_Sam: "Did Patrick inform Sam that Mary ate many of the cupcakes?",
+      content: "Mary ate some of the cupcakes",
+      know: "Does Patrick know that Mary ate some of the cupcakes?",
+      discover: "Did Patrick discover that Mary ate some of the cupcakes?",
+      reveal: "Did Patrick reveal that Mary ate some of the cupcakes?",
+      establish: "Did Patrick establish that Mary ate some of the cupcakes?",
+      think: "Does Patrick think that Mary ate some of the cupcakes?",
+      suggest: "Did Patrick suggest that Mary ate some of the cupcakes?",
+      prove: "Did Patrick prove that Mary ate some of the cupcakes?",
+      say: "Did Patrick say that Mary ate some of the cupcakes?",
+      hear: "Did Patrick hear that Mary ate some of the cupcakes?",
+      inform_Sam: "Did Patrick inform Sam that Mary ate some of the cupcakes?",
       acknowledge:
-        "Did Patrick acknowledge that Mary ate many of the cupcakes?",
-      confirm: "Did Patrick confirm that Mary ate many of the cupcakes?",
+        "Did Patrick acknowledge that Mary ate some of the cupcakes?",
+      confirm: "Did Patrick confirm that Mary ate some of the cupcakes?",
     },
     2: {
       gender: "f",
-      content: "Josie failed many of the courses",
-      know: "Does Scott know that Josie failed many of the courses?",
-      discover: "Did Scott discover that Josie failed many of the courses?",
-      reveal: "Did Scott reveal that Josie failed many of the courses?",
-      establish: "Did Scott establish that failed many of the courses?",
-      think: "Does Scott think that Josie failed many of the courses?",
-      suggest: "Did Scott suggest that Josie failed many of the courses?",
-      prove: "Did Scott prove that Josie failed many of the courses?",
-      say: "Did Scott say that Josie failed many of the courses?",
-      hear: "Did Scott hear that Josie failed many of the courses?",
-      inform_Sam: "Did Scott inform Sam that Josie failed many of the courses?",
+      content: "Josie failed some of the courses",
+      know: "Does Scott know that Josie failed some of the courses?",
+      discover: "Did Scott discover that Josie failed some of the courses?",
+      reveal: "Did Scott reveal that Josie failed some of the courses?",
+      establish: "Did Scott establish that failed some of the courses?",
+      think: "Does Scott think that Josie failed some of the courses?",
+      suggest: "Did Scott suggest that Josie failed some of the courses?",
+      prove: "Did Scott prove that Josie failed some of the courses?",
+      say: "Did Scott say that Josie failed some of the courses?",
+      hear: "Did Scott hear that Josie failed some of the courses?",
+      inform_Sam: "Did Scott inform Sam that Josie failed some of the courses?",
       acknowledge:
-        "Did Scott acknowledge that Josie failed many of the courses?",
-      confirm: "Did Scott confirm that Josie failed many of the courses?",
+        "Did Scott acknowledge that Josie failed some of the courses?",
+      confirm: "Did Scott confirm that Josie failed some of the courses?",
     },
     3: {
       gender: "f",
-      content: "Emma used many of the office supplies",
-      know: "Does Justin know that Emma used many of the office supplies?",
+      content: "Emma used some of the office supplies",
+      know: "Does Justin know that Emma used some of the office supplies?",
       discover:
-        "Did Justin discover that Emma used many of the office supplies?",
-      reveal: "Did Justin reveal that Emma used many of the office supplies?",
+        "Did Justin discover that Emma used some of the office supplies?",
+      reveal: "Did Justin reveal that Emma used some of the office supplies?",
       establish:
-        "Did Justin establish that Emma used many of the office supplies?",
-      think: "Does Justin think that Emma used many of the office supplies?",
-      suggest: "Did Justin suggest that Emma used many of the office supplies?",
-      prove: "Did Justin prove that Emma used many of the office supplies?",
-      say: "Did Justin say that Emma used many of the office supplies?",
-      hear: "Did Justin hear that Emma used many of the office supplies?",
+        "Did Justin establish that Emma used some of the office supplies?",
+      think: "Does Justin think that Emma used some of the office supplies?",
+      suggest: "Did Justin suggest that Emma used some of the office supplies?",
+      prove: "Did Justin prove that Emma used some of the office supplies?",
+      say: "Did Justin say that Emma used some of the office supplies?",
+      hear: "Did Justin hear that Emma used some of the office supplies?",
       inform_Sam:
-        "Did Justin inform Sam that Emma used many of the office supplies?",
+        "Did Justin inform Sam that Emma used some of the office supplies?",
       acknowledge:
-        "Did Justin acknowledge that Emma used many of the office supplies?",
-      confirm: "Did Justin confirm that Emma used many of the office supplies?",
+        "Did Justin acknowledge that Emma used some of the office supplies?",
+      confirm: "Did Justin confirm that Emma used some of the office supplies?",
     },
     4: {
       gender: "m",
-      content: "Danny solved many of the puzzles",
-      know: "Does Jerry know that Danny solved many of the puzzles?",
-      discover: "Did Jerry discover that Danny solved many of the puzzles?",
-      reveal: "Did Jerry reveal that Danny solved many of the puzzles?",
-      establish: "Did Jerry establish that Danny solved many of the puzzles?",
-      think: "Does Jerry think that Danny solved many of the puzzles?",
-      suggest: "Did Jerry suggest that Danny solved many of the puzzles?",
-      prove: "Did Jerry prove that Danny solved many of the puzzles?",
-      say: "Did Jerry say that Danny solved many of the puzzles?",
-      hear: "Did Jerry hear that Danny solved many of the puzzles?",
-      inform_Sam: "Did Jerry inform Sam that Danny solved many of the puzzles?",
+      content: "Danny solved some of the puzzles",
+      know: "Does Jerry know that Danny solved some of the puzzles?",
+      discover: "Did Jerry discover that Danny solved some of the puzzles?",
+      reveal: "Did Jerry reveal that Danny solved some of the puzzles?",
+      establish: "Did Jerry establish that Danny solved some of the puzzles?",
+      think: "Does Jerry think that Danny solved some of the puzzles?",
+      suggest: "Did Jerry suggest that Danny solved some of the puzzles?",
+      prove: "Did Jerry prove that Danny solved some of the puzzles?",
+      say: "Did Jerry say that Danny solved some of the puzzles?",
+      hear: "Did Jerry hear that Danny solved some of the puzzles?",
+      inform_Sam: "Did Jerry inform Sam that Danny solved some of the puzzles?",
       acknowledge:
-        "Did Jerry acknowledge that Danny solved many of the puzzles?",
-      confirm: "Did Jerry confirm that Danny solved many of the puzzles?",
+        "Did Jerry acknowledge that Danny solved some of the puzzles?",
+      confirm: "Did Jerry confirm that Danny solved some of the puzzles?",
     },
     5: {
       gender: "m",
-      content: "Frank answered many of the questions",
-      know: "Does Ben know that Frank answered many of the questions?",
-      discover: "Did Ben discover that Frank answered many of the questions?",
-      reveal: "Did Ben reveal that Frank answered many of the questions?",
-      think: "Does Ben think that Frank answered many of the questions?",
-      suggest: "Did Ben suggest that Frank answered many of the questions?",
-      prove: "Did Ben prove that Frank answered many of the questions?",
-      say: "Did Ben say that Frank answered many of the questions?",
-      establish: "Did Ben establish that Frank answered many of the questions?",
-      hear: "Did Ben hear that Frank answered many of the questions?",
+      content: "Frank answered some of the questions",
+      know: "Does Ben know that Frank answered some of the questions?",
+      discover: "Did Ben discover that Frank answered some of the questions?",
+      reveal: "Did Ben reveal that Frank answered some of the questions?",
+      think: "Does Ben think that Frank answered some of the questions?",
+      suggest: "Did Ben suggest that Frank answered some of the questions?",
+      prove: "Did Ben prove that Frank answered some of the questions?",
+      say: "Did Ben say that Frank answered some of the questions?",
+      establish: "Did Ben establish that Frank answered some of the questions?",
+      hear: "Did Ben hear that Frank answered some of the questions?",
       inform_Sam:
-        "Did Ben inform Sam that Frank answered many of the questions?",
+        "Did Ben inform Sam that Frank answered some of the questions?",
       acknowledge:
-        "Did Ben acknowledge that Frank answered many of the questions?",
-      confirm: "Did Ben confirm that Frank answered many of the questions?",
+        "Did Ben acknowledge that Frank answered some of the questions?",
+      confirm: "Did Ben confirm that Frank answered some of the questions?",
     },
     6: {
       gender: "m",
-      content: "Jackson completed many of the assignments",
-      know: "Does Ray know that Jackson completed many of the assignments?",
+      content: "Jackson completed some of the assignments",
+      know: "Does Ray know that Jackson completed some of the assignments?",
       discover:
-        "Did Ray discover that Jackson completed many of the assignments?",
-      reveal: "Did Ray reveal that Jackson completed many of the assignments?",
+        "Did Ray discover that Jackson completed some of the assignments?",
+      reveal: "Did Ray reveal that Jackson completed some of the assignments?",
       establish:
-        "Did Ray establish that Jackson completed many of the assignments?",
-      think: "Does Ray think that Jackson completed many of the assignments?",
+        "Did Ray establish that Jackson completed some of the assignments?",
+      think: "Does Ray think that Jackson completed some of the assignments?",
       suggest:
-        "Did Ray suggest that Jackson completed many of the assignments?",
-      prove: "Did Ray prove that Jackson completed many of the assignments?",
-      say: "Did Ray say that Jackson completed many of the assignments?",
-      hear: "Did Ray hear that Jackson completed many of the assignments?",
+        "Did Ray suggest that Jackson completed some of the assignments?",
+      prove: "Did Ray prove that Jackson completed some of the assignments?",
+      say: "Did Ray say that Jackson completed some of the assignments?",
+      hear: "Did Ray hear that Jackson completed some of the assignments?",
       inform_Sam:
-        "Did Ray inform Sam that Jackson completed many of the assignments?",
+        "Did Ray inform Sam that Jackson completed some of the assignments?",
       acknowledge:
-        "Did Ray acknowledge that Jackson completed many of the assignments?",
+        "Did Ray acknowledge that Jackson completed some of the assignments?",
       confirm:
-        "Did Ray confirm that Jackson completed many of the assignments?",
+        "Did Ray confirm that Jackson completed some of the assignments?",
     },
     7: {
       gender: "f",
@@ -812,7 +820,7 @@ function init() {
     },
     11: {
       gender: "m",
-      content: "Tony answered emails or callss",
+      content: "Tony answered emails or calls",
       know: "Does Amanda know that Tony answered emails or calls?",
       discover: "Did Amanda discover that Tony answered emails or calls?",
       reveal: "Did Amanda reveal that Tony answered emails or calls?",
@@ -936,20 +944,20 @@ function init() {
     11: ["factH", "factL"],
     12: ["factH", "factL"],
   };
-  var many_contents = _.shuffle(["1", "2", "3", "4", "5", "6"]);
+  var some_contents = _.shuffle(["1", "2", "3", "4", "5", "6"]);
   var or_contents = _.shuffle(["7", "8", "9", "10", "11", "12"]);
   var probe_by_content = {};
 
-  many_contents.slice(0, 3).forEach(function (c) {
-    probe_by_content[c] = "and possibly all";
+  some_contents.slice(0, 3).forEach(function (c) {
+    probe_by_content[c] = "and possibly all of them";
   });
 
-  many_contents.slice(3, 6).forEach(function (c) {
-    probe_by_content[c] = "but not all";
+  some_contents.slice(3, 6).forEach(function (c) {
+    probe_by_content[c] = "but not all of them";
   });
 
   or_contents.slice(0, 3).forEach(function (c) {
-    probe_by_content[c] = "not both";
+    probe_by_content[c] = "but not both";
   });
 
   or_contents.slice(3, 6).forEach(function (c) {
@@ -1257,7 +1265,7 @@ function init() {
     screenUW: exp.width,
   };
   //blocks of the experiment:
-  exp.structure = ["i0", "block1", "questionaire", "finished"];
+  exp.structure = ["i0",  "consent", "block1", "questionaire", "finished"];
 
   exp.data_trials = [];
   //make corresponding slides:
