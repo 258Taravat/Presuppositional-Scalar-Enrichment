@@ -37,7 +37,7 @@ table {
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
-  width: 900px;     
+  width: 900px;
   min-height: 600px;
   padding: 10px 20px;
   margin: 0;
@@ -78,9 +78,17 @@ button[disabled] {
   border-left: 1px solid #e0e0e0;
   cursor: not-allowed;
 }
+#i0 {
+  padding-top: 160px;
+}
 
-
-
+#i0 #instruct-text {
+  width: 650px;
+  max-width: 90%;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
+  text-align: center;
+}
 #centered {
   text-align: center;
 }
@@ -107,13 +115,24 @@ form {
 
 #instructions {
   text-align: center;
+  padding-top: 90px;
 }
 
-.block-text {
-  width: 500px;
+#instructions .block-text {
+  width: 650px;
+  max-width: 90%;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+  text-align: left;
   text-align: justify;
-  margin: 0 auto;
-  margin-bottom: 1em;
+}
+
+#instructions p {
+  line-height: 1.6;
+}
+
+#instructions button {
+  margin-top: 20px;
 }
 
 .sliderlabel {
@@ -136,10 +155,10 @@ form {
 
 #legal {
   text-align: justify;
-  width: 900px;          
-  margin: 30px auto;     
-  padding: 20px;         
-  text-align: justify;   
+  width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: justify;
   font-size: 0.8em;
   line-height: 1.5;
 }
@@ -200,35 +219,40 @@ form {
   font-size: 12px;
 }
 .questionnaire {
-    width: 1100px;
-    margin: 0 auto;
-    text-align: left;
+  width: 1100px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .questionnaire p {
-    text-align: left;
-    margin-bottom: 20px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .questionnaire textarea,
 .questionnaire input[type="text"] {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 .education {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex-wrap: nowrap;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .education label {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 #consent p {
-    width: 700px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.6;
+  width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+#consent h2 {
+  width: 700px;
+  margin: 30px auto;
+  text-align: center;
 }
 #qudy0 {
   width: 150px;
@@ -272,4 +296,35 @@ form {
 #qudy3 .ui-slider-handle {
   height: 23px;
   width: 10px;
+}
+#block1 {
+  padding-top: 110px;
+}
+#questionaire {
+  padding-top: 80px;
+}
+
+#questionaire .questionnaire {
+  width: 1400px;
+  max-width: 98%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#questionaire .questionnaire p {
+  line-height: 1.5;
+}
+
+#questionaire .debrief-note {
+  width: 1000px;
+  max-width: 95%;
+  margin: 10px auto 30px auto;
+  line-height: 1.5;
+  text-align: justify;
+}
+#finished {
+  padding-top: 120px;
+  padding-bottom: 20px;
+  height: auto;
+  min-height: 0;
 }

@@ -1,13 +1,15 @@
 <html>
-
-<head>
+  <head>
     <title>Language study</title>
 
     <!--JS-->
 
     <!-- external general utilities -->
     <script src="../_shared/js/jquery-1.11.1.min.js"></script>
-    <script src="https://proliferate.alps.science/static/js/proliferate.js" type="text/javascript"></script>
+    <script
+      src="https://proliferate.alps.science/static/js/proliferate.js"
+      type="text/javascript"
+    ></script>
     <script src="../_shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
     <script src="../_shared/js/underscore-min.js"></script>
 
@@ -26,44 +28,118 @@
     <!-- <script src="js/local-utils.js"></script> -->
 
     <!--CSS-->
-    <link href="../_shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../_shared/css/cocolab-style.css" rel="stylesheet" type="text/css"/>
-    <link href="css/local-style.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>    
+    <link
+      href="../_shared/full-projects/jquery-ui/jquery-ui.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../_shared/css/cocolab-style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/local-style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
     <!-- experiment file -->
     <script src="js/experiment.js"></script>
-    
-</head>
+  </head>
 
-<body onload="init();">
-  <noscript>This task requires JavaScript.</noscript>
+  <body>
+    <noscript>This task requires JavaScript.</noscript>
 
-  <div class="slide" id="i0" > 
-  <p class="block-text" id="instruct-text"><br><br> Imagine you are at a party. You walk into the kitchen and overhear somebody ask somebody else a question:</p> 
-<br>
-<b>Bill asks:</b> <i>"Does Drew believe that Patty lives in Canada?"</i>
-<br>
-<br>
-<br>
-<p class="block-text" id="instruct-text">We ask you: Given what Bill says, is he certain that Patty lives in Canada? </p>
+    <div class="slide" id="i0">
+      <br /><br />
 
-<p class="block-text" id="instruct-text">You give your response on a sliding scale from 'no' to 'yes'.</p> 
+      <p id="instruct-text">
+        Welcome! In this study, we are interested in how people interpret things
+        that other people say. You will read a series of sentences and answer a
+        question about each. Thanks for participating!
+      </p>
 
-<p class="block-text" id="instruct-text">There are a total of 12 items. The task will take about |||||6 minutes and you will be paid 75 cents.|||||</p>
+      <button id="start_button" type="button">Continue</button>
 
-<p class="block-text" id="instruct-text">We have included some items for which we already know the answer. If you are paying attention, you are sure to get those right! At the end of the task, we will ask you four short questions about you and your language use. You will be paid no matter what you answer there, so please answer truthfully.</p>
+      <p id="mustaccept" style="color: red; display: none">
+        Please accept the HIT before starting.
+      </p>
+    </div>
+    <br /><br />
+    <div class="slide" id="consent" style="text-align: left; display: none">
+      <br />
+      <h2>Consent Form</h2>
+      <p>
+        Please consider the following information before agreeing to
+        participate: <br /><br />
+        My name is Taravat Yazdani, and I am a graduate student in the
+        Linguistics Program at the University of South Carolina. This study is
+        being conducted as part of my research and is sponsored by the
+        Linguistics Program at the University of South Carolina.<br /><br />
 
-Thank you!
+        I am studying how people understand and interpret language in different
+        contexts. If you decide to participate, you will be asked to read brief
+        passages of text and provide judgments about information conveyed in
+        those passages. The study should take approximately 5–10 minutes to
+        complete.<br /><br />
 
-<br>
-<br>
+        Participation is confidential. Study information will be kept in a
+        secure location at the University of South Carolina. The results of the
+        study may be published or presented at professional meetings, but your
+        identity (including your Prolific ID) will never be revealed.<br /><br />
 
-    <button id="start_button" type="button">Start Experiment</button>
-    <p id="legal">By clicking on the button above you agree to participate in this experiment, which is conducted by a researcher at University of South Carolina. The goal of this research is to understand how English sentences are interpreted and, if you participate in the experiment, you will be asked, as explained above, to provide judgments about English sentences. You may withdraw from this experiment at any time or skip any questions without penalty or loss of benefits, including loss or reduction of payment. If you do withdraw from the study before the end, please contact the researchers for information on how to collect payment (TYAZDANI@email.sc.edu). The data collected will be anonymous and confidential.  If you have any questions, you may contact the requester directly at TYAZDANI@email.sc.edu. For questions about your rights as a participant in this study or to discuss other study-related concerns or complaints with someone who is not part of the research team, you may contact |||||||Ms. Sandra Meadows in the Ohio State University Office of Responsible Research Practices at 1-800-678-6251.|||||||||</p>
-  </div></p> </div>
+        You will receive 1.20 $ for participating in the study. <br /><br />
+        I am happy to answer any questions you have about the study. You may
+        contact me at TYAZDANI@email.sc.edu<br /><br />
 
-  <!-- 
+        If you have concerns about your rights as a research subject, please
+        contact the University of South Carolina’s Office of Research Compliance
+        (803) 777-6670.<br /><br />
+      </p>
+      <div style="text-align: center">
+        <button type="button" onclick="_s.button()">
+          I consent — continue
+        </button>
+      </div>
+    </div>
+    <div class="slide" id="instructions">
+      <p class="block-text" id="instruct-text">
+        <br /><br />
+        Imagine you are at a party. You walk into the kitchen and overhear
+        somebody ask somebody else a question:
+      </p>
+      <br />
+      <b>Bill asks:</b> <i>"Does Drew believe that Patty lives in Canada?"</i>
+      <br />
+      <br />
+      <br />
+      <p class="block-text" id="instruct-text">
+        We ask you: Given what Bill says, is he certain that Patty lives in
+        Canada?
+      </p>
+
+      <p class="block-text" id="instruct-text">
+        You give your response on a sliding scale from 'no' to 'yes'.
+      </p>
+
+      <p class="block-text" id="instruct-text">
+        There are a total of 16 questions. The task will take about 5 minutes
+        and you will be paid 1.20 $.
+      </p>
+
+      <p class="block-text" id="instruct-text">
+        We have included some questions for which we already know the answer. If
+        you are paying attention, you are sure to get those right! At the end of
+        the task, we will ask you some short questions about you and your
+        language use. You will be paid no matter what you answer there, so
+        please answer truthfully.
+      </p>
+
+      Thank you!
+
+      <br />
+
+      <button type="button" onclick="_s.button()">Start Experiment</button>
+    </div>
+    <!-- 
 <div class="slide" id="instructions">
   <br>
     <h4>Instructions</h4>
@@ -84,69 +160,60 @@ complete. <br> </p>
 
 <p class="block-text"> <b>To make sure you are paying attention, we have included some questions for which we know the right answer. If you read the questions carefully, you will definitely get those right.<br></b></p>
  -->
-   
-<!--
+
+    <!--
 <p class="block-text">
 <b> Survey:</b> At the end of the experiment, we'll ask you three short questions about you and your language background. You will be paid no matter what answers you give in this survey (so please answer truthfully).
 <br>
 </p>
 -->
- <!-- 
+    <!-- 
    <button onclick="_s.button()">Continue</button>
   </div>
  -->
-  
-<!-- 
+
+    <!-- 
   <div class="slide" id="instructions1">
   <br>  
 <p class="block-text" id="inst1">{{}}</p>
     <button onclick="_s.button()">Continue</button>
 </div> 
- --> 
-<div class="slide" id="consent" style="text-align: left; display: none;">
-    <br>
-    <h2>Consent Form</h2>
-    <p>Please consider the following information before agreeing to participate: <br><br>
-    My name is Taravat Yazdani, and I am a graduate student in the Linguistics Program at the University of South Carolina. This study is being conducted as part of my research and is sponsored by the Linguistics Program at the University of South Carolina.<br><br>
+ -->
 
-    I am studying how people understand and interpret language in different contexts. If you decide to participate, you will be asked to read brief passages of text and provide judgments about information conveyed in those passages. The study should take approximately 5–10 minutes to complete.<br><br>
-
-    Participation is confidential. Study information will be kept in a secure location at the University of South Carolina. The results of the study may be published or presented at professional meetings, but your identity (including your Prolific ID) will never be revealed.<br><br>
-
-    You will receive [TBD] for participating in the study. <br><br>
-    I am happy to answer any questions you have about the study. You may contact me at TYAZDANI@email.sc.edu<br><br>
-
-    If you have concerns about your rights as a research subject, please contact the University of South Carolina’s Office of Research Compliance (803) 777-6670.<br><br>
-    </p>
-    <div style="text-align:center;"><button type="button" onclick="_s.button()">I consent — continue</button></div>
-  </div>
- <div class="slide" id="block1">
-  <br> 
-  	<br>
-  		<p class="utterance">{{}}</p> 
-	<p class="sentence">{{}}</p> 
-	<br> 
-	<br>
-	<br>	
-	<p class="question">{{}}</p>
-    <table id="slider_table" class="slider_table">
-    <tr><td class="left"><h4>No</h4></td><td colspan="2"><div id="single_slider" class="slider"></div></td><td class="right"><h4>Yes</h4></td></tr>
-      <!-- 
+    <div class="slide" id="block1">
+      <br />
+      <br />
+      <p class="utterance">{{}}</p>
+      <p class="sentence">{{}}</p>
+      <br />
+      <br />
+      <p class="question">{{}}</p>
+      <br />
+      <table id="slider_table" class="slider_table">
+        <tr>
+          <td class="left"><h4>No</h4></td>
+          <td colspan="2"><div id="single_slider" class="slider"></div></td>
+          <td class="right"><h4>Yes</h4></td>
+        </tr>
+        <!-- 
 <tr><td class="left"><h4>definitely not</h3></td><td></td><td></td><td class="right"><h4>definitely yes</h3></td></tr>
       <tr><td></td><td colspan="2"><div id="single_slider" class="slider"></div></td><td></td></tr>
  -->
-    </table>    
-   
-    
-    <button onclick="_s.button()">Next</button>
-	<p class="err">Please adjust the slider before continuing.</p>  
-</div>
+      </table>
 
-<div class="slide" id="questionaire">
-    <div class="long_form questionnaire">
-      <div class="subj_info_title">Debrief questions</div>
-      
-      <!-- 
+      <button onclick="_s.button()">Next</button>
+      <p class="err">Please adjust the slider before continuing.</p>
+    </div>
+
+    <div class="slide" id="questionaire">
+      <div class="long_form questionnaire">
+        <div class="subj_info_title">Debrief questions</div>
+        <p class="debrief-note">
+          Answering these questions is optional. You will receive full payment
+          whether or not you choose to answer them. However, your responses
+          would be a great help to us.
+        </p>
+        <!-- 
 <p align="left">Gender:
         <select id="gender">
           <label><option value=""/></label>
@@ -156,44 +223,57 @@ complete. <br> </p>
         </select>
       </p>
  -->
-      
-      <p align="left">What's your gender?
-      <label><input type="radio"  name="gender" value="m"/>Male</label>
-      <label><input type="radio"  name="gender" value="f"/>Female</label>
-      <label><input type="radio"  name="gender" value="o"/>Other</label></p>
 
-      <p align="left">Age: <input type="text" id="age"/></p>
-      
-      <p align="left">Native language(s) (spoken at home when you were a child): <input type="text" id="language"/></p>
-      <!-- <label>(the language(s) spoken at home when you were a child)</label> -->
+        <p align="left">
+          What's your gender?
+          <label><input type="radio" name="gender" value="m" />Male</label>
+          <label><input type="radio" name="gender" value="f" />Female</label>
+          <label><input type="radio" name="gender" value="o" />Other</label>
+        </p>
 
-      <p align="left">If English is your native language, is it AMERICAN English, as opposed to e.g., INDIAN or AUSTRALIAN English?</p>
-      <!-- <select id="american"> -->
-      <label><input type="radio"  name="american" value="y"/>Yes</label>
-      <label><input type="radio"  name="american" value="n"/>No</label>
+        <p align="left">Age: <input type="text" id="age" /></p>
+
+        <p align="left">
+          Native language(s) (spoken at home when you were a child):
+          <input type="text" id="language" />
+        </p>
+        <!-- <label>(the language(s) spoken at home when you were a child)</label> -->
+
+        <p align="left">
+          If English is your native language, is it AMERICAN English, as opposed
+          to e.g., INDIAN or AUSTRALIAN English?
+        </p>
+        <!-- <select id="american"> -->
+        <label><input type="radio" name="american" value="y" />Yes</label>
+        <label><input type="radio" name="american" value="n" />No</label>
         <!-- 
 <label><option value="-1"></option></label>
         <label><option value="0">Yes</option></label>
         <label><option value="1" >No</option></label>
       </select>
  -->
-      <p>Did you read the instructions and do you think you did the experiment correctly?</p>
-      <label><input type="radio" name="assess" value="Yes">Yes</label>
-      <label><input type="radio" name="assess" value="Confused">I was confused</label>
-    <label><input type="radio" name="assess" value="No">No</label>
+        <p>
+          Did you read the instructions and do you think you did the experiment
+          correctly?
+        </p>
+        <label><input type="radio" name="assess" value="Yes" />Yes</label>
+        <label
+          ><input type="radio" name="assess" value="Confused" />I was
+          confused</label
+        >
+        <label><input type="radio" name="assess" value="No" />No</label>
 
-
-      <!-- 
+        <!-- 
 <p>Were there any problems or bugs in the experiment?</p>
       <textarea id="problems" rows="2" cols="50"></textarea>
       -->
 
-      <!-- 
+        <!-- 
 <p>What do you think is a fair price for the work you did?</p>
       <textarea id="fairprice" rows="1" cols="10"></textarea>
  
  -->
-      <!-- 
+        <!-- 
 <p>Level Of Education:
         <select id="education">
           <label><option value="-1"/></label>
@@ -205,52 +285,81 @@ complete. <br> </p>
         </select>
       </p>
  -->
-      <p align="left"> Were there any problems or bugs in the experiment? <input type="text" id="problems"/></p>
-      <p class="info" ></p>
-      <p>Level of education:</p>
-      <label><input type="radio" name="education" value="Some High School">Some High School</label>
-      <label><input type="radio" name="education" value="Graduated High School">Graduated High School</label>
-      <label><input type="radio" name="education" value="Some College">Some College</label>
-      <label><input type="radio" name="education" value="Graduated College">Graduated College</label>
-      <label><input type="radio" name="education" value="Hold a higher degree">Hold a higher degree</label>
-      <p class="info"></p>
+        <p align="left">
+          Were there any problems or bugs in the experiment?
+          <input type="text" id="problems" />
+        </p>
+        <p class="info"></p>
+        <p>Level of education:</p>
+        <label
+          ><input type="radio" name="education" value="Some High School" />Some
+          High School</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="education"
+            value="Graduated High School"
+          />Graduated High School</label
+        >
+        <label
+          ><input type="radio" name="education" value="Some College" />Some
+          College</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="education"
+            value="Graduated College"
+          />Graduated College</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="education"
+            value="Hold a higher degree"
+          />Hold a higher degree</label
+        >
+        <p class="info"></p>
 
-      <p class="info"></p>
-      <p>Did you enjoy the experiment?</p>
-      <label><input type="radio" name="enjoyment" value="Yes">Yes</label>
-      <label><input type="radio" name="enjoyment" value="It was fine">It was fine</label>
-      <label><input type="radio" name="enjoyment" value="No">No</label>
+        <p class="info"></p>
+        <p>Did you enjoy the experiment?</p>
+        <label><input type="radio" name="enjoyment" value="Yes" />Yes</label>
+        <label
+          ><input type="radio" name="enjoyment" value="It was fine" />It was
+          fine</label
+        >
+        <label><input type="radio" name="enjoyment" value="No" />No</label>
       </div>
-      <p align="left">We would be interested in any comments you have about this experiment. Please type them here:</p>
+      <p align="left">
+        We would be interested in any comments you have about this experiment.
+        Please type them here:
+      </p>
       <textarea id="comments" rows="3" cols="50"></textarea>
-      <br/>
+      <br />
       <button onclick="_s.submit()">Submit</button>
     </div>
-  </div>
 
-  <div id="thanks" class="slide js" >
-    <p  class="big">Thank you for your time!</p>
-  </div>
+    <div id="thanks" class="slide js">
+      <p class="big">Thank you for your time!</p>
+    </div>
 
-  <div class="progress">
-    <span>Progress:</span>
-    <div class="bar-wrapper">
-      <div class="bar" width="0%">
+    <div class="progress">
+      <span>Progress:</span>
+      <div class="bar-wrapper">
+        <div class="bar" width="0%"></div>
       </div>
     </div>
-  </div>
 
-  <div class="slide" id="finished">
-  You're finished - thanks for participating!
-  </div>
+    <div class="slide" id="finished">
+      You're finished - thanks for participating!
+    </div>
 
-  <div class="progress">
-    <span>Progress:</span>
-    <div class="bar-wrapper">
-      <div class="bar" width="0%">
+    <div class="progress">
+      <span>Progress:</span>
+      <div class="bar-wrapper">
+        <div class="bar" width="0%"></div>
       </div>
     </div>
-  </div>
-
-</body>
+  </body>
 </html>

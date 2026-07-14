@@ -1264,7 +1264,14 @@ function init() {
     screenUW: exp.width,
   };
   //blocks of the experiment:
-  exp.structure = ["i0", "consent", "block1", "questionaire", "finished"];
+  exp.structure = [
+    "i0",
+    "consent",
+    "instructions",
+    "block1",
+    "questionaire",
+    "finished",
+  ];
 
   exp.data_trials = [];
   //make corresponding slides:
@@ -1278,17 +1285,11 @@ function init() {
 
   $(".slide").hide(); //hide everything
 
-  //make sure turkers have accepted HIT (or you're not in mturk)
-  $("#start_button").click(function () {
-    if (turk.previewMode) {
-      $("#mustaccept").show();
-    } else {
-      $("#start_button").click(function () {
-        $("#mustaccept").show();
-      });
-      exp.go();
-    }
+  $("#start_button").on("click", function () {
+    exp.go();
   });
-
   exp.go(); //show first slide
 }
+document.addEventListener("DOMContentLoaded", function () {
+  init();
+});
